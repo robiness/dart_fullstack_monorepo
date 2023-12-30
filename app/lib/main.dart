@@ -53,7 +53,8 @@ class _MyHomePageState extends State<MyHomePage> {
               }
               final model = SharedModel(value: _value!);
               http.post(
-                Uri.parse('http://localhost:8080/model'),
+                //Uri.parse('http://localhost:8080/model'),
+                Uri.parse('https://dart-fullstack-monorepo-om8hwyn-robiness.globeapp.dev/model'),
                 headers: {'Content-Type': 'application/json'},
                 body: jsonEncode(model.toJson()),
               );
